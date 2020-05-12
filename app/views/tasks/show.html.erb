@@ -1,8 +1,9 @@
+@import "path/to/font-awesome/less/font-awesome.less";
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 <p>Completed: <%= @task.completed %></p>
+<%= link_to 'Edit Task', tasks_path(@tasks) %><br>
 <%= link_to '◀️Back To list', tasks_path(@tasks) %><br>
-  <%= link_to "🚫Delete #{@task.title}",
-            task_path(@task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+
+  <%= link_to "Delete", task_path(@task), method: :delete,
+   data: { confirm: "Are you sure?" } %><i class="fas fa-trash-alt"></i>

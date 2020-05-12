@@ -4,9 +4,9 @@
     <div class="d-flex row">
       <%= link_to task.title, task_path(task) %>
       <% if task.completed %>
-       ✅
+       <i class="far fa-check-circle"></i>
       <% else %>
-       ❌
+       <i class="far fa-times-circle"></i>
       <% end %>
     </div>
   <% end %>

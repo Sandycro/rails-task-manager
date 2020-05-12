@@ -1,0 +1,13 @@
+<h1>My Tasks</h1>
+<div class="container">
+  <% @tasks.each do |task| %>
+    <div class="d-flex row">
+      <%= link_to task.title, task_path(task) %>
+      <% if task.completed %>
+       ✅
+      <% else %>
+       ❌
+      <% end %>
+    </div>
+  <% end %>
+</div>
